@@ -10,6 +10,8 @@ android {
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
+        //To avoid DEX’s 64k limit. See section <i>Using the official solution</i> in https://medium.com/@mustafa01ali/dexs-64k-limit-is-not-a-problem-anymore-well-almost-2b1faac3508
+        multiDexEnabled true
     }
     buildTypes {
         release {
