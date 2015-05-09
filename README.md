@@ -15,3 +15,6 @@ Error:Execution failed for task ':app:shrinkDebugMultiDexComponents'.
 > java.io.IOException: Can't read [....../build/intermediates/multi-dex/debug/allclasses.jar] (Can't process class [com/tencent/wxop/stat/al.class] (Unknown verification type [95] in stack map frame
 
 本Demo要证明：libammsdk.jar与解决DEX’s 64k limit的方法冲突，也就是微信的libammsdk.jar有问题。
+
+临时解决方法：在分支[Different-WeChat-Lib](https://github.com/fabin/WechatSDK-Demo/tree/Different-WeChat-Lib)的[libammsdk.jar](https://github.com/fabin/WechatSDK-Demo/blob/Different-WeChat-Lib/app/libs/libammsdk.jar)是从其他Project中中Copy过来的旧版本的jar，用这个旧版本的没问题。
+（从com.tencent.mm.sdk.constants.SDK_INT看版本号是一样的，其实不是同一个版本）
